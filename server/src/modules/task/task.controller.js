@@ -21,12 +21,12 @@ export const createTask = async (req, res) => {
 };
 
 export const updateTask = async (req, res) => {
-  const { id, title, content } = req.body;
+  const { id, title, content, status } = req.body;
   const { userId } = req.user;
 
   const [affectedCount] = await Task.update(
     { title, content },
-    { where: { id, userId } },
+    { where: { id, userId, status } },
   );
 
   if (affectedCount === 0) throw new NotFoundError("Failed to update task");

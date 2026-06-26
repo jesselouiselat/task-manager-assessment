@@ -43,6 +43,7 @@ const Task = sequelize.define(
         },
       },
     },
+
     status: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,

@@ -22,9 +22,26 @@ const Task = sequelize.define(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        notNull: { msg: "Title is required" },
+        notEmpty: { msg: "Please enter a valid title" },
+        len: {
+          args: [3, 100],
+          msg: "Must be at leat 3 letters",
+        },
+      },
     },
     content: {
       type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull: { msg: "Content is required" },
+        notEmpty: { msg: "Please enter a valid content" },
+        len: {
+          args: [2, 100],
+          msg: "Must be at leat 2 letters",
+        },
+      },
     },
     status: {
       type: DataTypes.BOOLEAN,

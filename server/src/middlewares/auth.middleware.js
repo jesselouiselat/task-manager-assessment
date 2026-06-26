@@ -12,7 +12,7 @@ export const authenticateUser = (req, res, next) => {
     const decodedPayload = verifyToken(token);
 
     req.user = {
-      id: decodedPayload.id,
+      userId: decodedPayload.id,
     };
     next();
   } catch (error) {

@@ -9,9 +9,9 @@ const sequelize = new Sequelize({
   password: ENV.DB_PASS,
   host: ENV.DB_HOST,
   port: ENV.DB_PORT,
-  ssl: true,
   clientMinMessages: "notice",
   connectionTimeoutMillis: 30000,
+  logging: ENV.NODE_ENV === "development" ? console.log : false,
 });
 
 export default sequelize;

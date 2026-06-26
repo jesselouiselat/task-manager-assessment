@@ -1,13 +1,13 @@
-import { toDefaultValue } from "sequelize/lib/utils";
-import sequelize from "../configs/db.js";
-import { DataTypes } from "sequelize";
+import sequelize from "../../configs/db.js";
+import { DataTypes } from "@sequelize/core";
 
 const User = sequelize.define(
   "User",
   {
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
       primaryKey: true,
     },
 
@@ -23,10 +23,18 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: { isEmail: true },
+    },
     passwordHash: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   },
-  { timestamps: true, tableName: users },
+  { timestamps: true, tableName: "users" },
 );
+
+export default User;

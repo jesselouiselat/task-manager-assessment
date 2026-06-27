@@ -35,11 +35,6 @@ export default function Header() {
             className="text-base-content flex items-center gap-3 text-xl font-bold"
             href="/"
           >
-            <img
-              src="https://cdn.flyonui.com/fy-assets/logo/logo.png"
-              className="size-8"
-              alt="brand-logo"
-            />
             Task Manager
           </a>
         </div>

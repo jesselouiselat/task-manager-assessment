@@ -16,32 +16,37 @@ const seedTasksWithUser = async () => {
       await Task.bulkCreate([
         {
           title: "Task 1",
-          content: "content for task 1",
+          content:
+            "Aliquam dolor mauris, interdum vel urna at, luctus pretium felis. Aenean pharetra nibh ut erat.",
           userId: adminEmail.id,
         },
         {
           title: "Task 2",
-          content: "content for task 2",
+          content:
+            "Pellentesque rutrum nulla eu odio varius, eget tempor magna gravida. Lorem ipsum dolor sit amet.",
           userId: adminEmail.id,
         },
         {
           title: "Task 3",
-          content: "content for task 3",
+          content: "Donec vel felis dui. Fusce est dui, ullamcorper et enim.",
           userId: adminEmail.id,
         },
         {
           title: "Task 4",
-          content: "content for task 4",
+          content:
+            "Praesent scelerisque, dui sed mollis lobortis, ante ante varius arcu.",
           userId: adminEmail.id,
         },
         {
           title: "Task 5",
-          content: "content for task 5",
+          content:
+            "Aliquam tellus sapien, vehicula ut sapien vel, accumsan mattis tortor.",
           userId: adminEmail.id,
         },
         {
           title: "Task 6",
-          content: "content for task 6",
+          content:
+            "Curabitur aliquet orci ultricies justo accumsan commodo eget eu felis.",
           userId: adminEmail.id,
         },
       ]);

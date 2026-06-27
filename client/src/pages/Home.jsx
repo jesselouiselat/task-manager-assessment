@@ -3,11 +3,9 @@ import Hero from "../components/Hero.jsx";
 
 export default function Home() {
   return (
-    <>
-      <div className="bg-base-100">
-        <Header />
-        <Hero />
-      </div>
-    </>
+    <div className="bg-base-500 mt-10">
+      <Header />
+      <Hero />
+    </div>
   );
 }

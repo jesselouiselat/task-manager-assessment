@@ -96,7 +96,16 @@ export default function Task() {
             </span>
           ) : (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {openNewTaskForm ? <AddTask /> : <></>}
+              {openNewTaskForm ? (
+                <AddTask
+                  onCancel={() => setOpenNewTaskForm(!openNewTaskForm)}
+                  onTaskAdded={(newTask) => {
+                    setTasks((prevTasks) => [newTask, ...prevTasks]);
+                  }}
+                />
+              ) : (
+                <></>
+              )}
               {tasks.map((task) => {
                 const isEditing = editingTaskId === task.id;
                 return (

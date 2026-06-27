@@ -1,6 +1,6 @@
 ## Task Manager
 
-A simple task manager application with authenticatio, search, and filter features.
+A simple task manager application with user authentication, search, and filter features.
 
 ---
 

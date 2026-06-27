@@ -21,7 +21,7 @@ export const authenticateCredentials = async (email, password) => {
   const userResponse = user.toJSON();
   delete userResponse.passwordHash;
 
-  const token = generateToken(user.is);
+  const token = generateToken(user.id);
 
   return { user: userResponse, token };
 };

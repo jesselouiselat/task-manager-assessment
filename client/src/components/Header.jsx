@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axiosInstance from "../api/AxiosInstance";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
-  const navigateTo
+  const navigateTo = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState({ firstName: "", username: "" });
 
@@ -20,7 +21,7 @@ export default function Header() {
       localStorage.removeItem("token");
       localStorage.removeItem("firstName");
       localStorage.removeItem("username");
-
+      navigateTo("/");
     } catch (error) {
       console.error(error);
     }
@@ -39,7 +40,7 @@ export default function Header() {
               className="size-8"
               alt="brand-logo"
             />
-            FlyonUI
+            Task Manager
           </a>
         </div>
         <div

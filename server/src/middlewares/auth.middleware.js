@@ -14,6 +14,8 @@ export const authenticateUser = (req, res, next) => {
     req.user = {
       userId: decodedPayload.id,
     };
+    console.log(req.user);
+
     next();
   } catch (error) {
     console.error("JWT Authentication Gate Failure", error.message);

@@ -7,8 +7,12 @@ import Task from "./pages/Task.jsx";
 import axiosInstance from "./api/AxiosInstance.js";
 import Home from "./pages/Home.jsx";
 
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem("token");
+  return token ? children : <Navigate to="/login" replace />;
+}
+
 function App() {
-  const isAutheticated = localStorage.getItem("token");
   const [testData, setTestData] = useState([]);
 
   async function testServerHandshake() {
@@ -32,7 +36,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route
           path="/task"
-          element={isAutheticated ? <Task /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute>
+              <Task />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="*"

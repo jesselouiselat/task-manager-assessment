@@ -1,7 +1,9 @@
+import Header from "../components/Header.jsx";
+
 export default function Task() {
   return (
     <>
-      <h1>Task</h1>
+      <Header />
     </>
   );
 }

@@ -1,7 +1,13 @@
+import Header from "../components/Header.jsx";
+import Hero from "../components/Hero.jsx";
+
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <div className="bg-base-100">
+        <Header />
+        <Hero />
+      </div>
     </>
   );
 }

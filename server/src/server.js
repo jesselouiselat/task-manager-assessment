@@ -11,7 +11,7 @@ const startServer = async () => {
     console.log("\n-=-=DB connection established successfully-=-=\n");
 
     if (ENV.NODE_ENV === "development") {
-      await sequelize.sync({ alter: true });
+      await sequelize.sync({ alter: false });
     }
 
     app.listen(port, () => {

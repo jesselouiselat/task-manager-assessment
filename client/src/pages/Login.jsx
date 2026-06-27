@@ -36,11 +36,6 @@ export default function Login() {
       <div className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="bg-base-100 shadow-base-300/20 z-1 w-full space-y-6 rounded-xl p-6 shadow-md sm:min-w-md lg:p-8">
           <div className="flex items-center gap-3">
-            <img
-              src="https://cdn.flyonui.com/fy-assets/logo/logo.png"
-              className="size-8"
-              alt="brand-logo"
-            />
             <h2 className="text-base-content text-xl font-bold">
               Task Manager
             </h2>
@@ -97,7 +92,7 @@ export default function Login() {
               </div>
 
               <button className="btn btn-lg btn-primary btn-gradient btn-block">
-                {isLoading ? "Sigining in..." : "Sign in to FlyonUI"}
+                {isLoading ? "Sigining in..." : "Sign in"}
               </button>
             </form>
             <p className="text-base-content/80 mb-4 text-center">

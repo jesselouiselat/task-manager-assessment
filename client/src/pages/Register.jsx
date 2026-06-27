@@ -182,7 +182,7 @@ export default function Register() {
               </div>
 
               <button className="btn btn-lg btn-primary btn-gradient btn-block">
-                {isLoading ? "Registering..." : "Register to FlyonUI"}
+                {isLoading ? "Registering..." : "Register "}
               </button>
             </form>
             <p className="text-base-content/80 mb-4 text-center">
